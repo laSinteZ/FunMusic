@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FunMusic | Listen, how your function sounds!</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="math.min.js"></script>
+    <script src="WebAudioFontPlayer.js"></script>
+
+    <script src="webaudiofont/2.0.Piano_323000005_461_460_45127.js"></script>
+    <script src="webaudiofont/24.16.Nylon_32Gt_46o000051_461_460_45127.js"></script>
+    <script src="webaudiofont/30.0.Distortion_32Gdistortiongt_461_460_45127.js"></script>
+    <script src="webaudiofont/8.0.Celesta000021_461_460_45127.js"></script>
+    <script src="webaudiofont/16.32.Organ_324000036_461_460_45127.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1>FunMusic</h1>
+    <input type="text" id="funToParse">
+    <input type="button" value="Play" id="play"><br>
+    <i>Tip: try x^2, x^3, 3.14, factorial(x)</i>
+    <br>
+    <br>
+    Scale:
+    <select id="scale">
+        <option value="0">Ionian I (Major)</option>
+        <option value="1">Dorian II</option>
+        <option value="2">Phrygian III</option>
+        <option value="3">Lydian IV</option>
+        <option value="4">Mixolydian V</option>
+        <option value="5">Aeolian VI (Minor)</option>
+        <option value="6">Locrian VII</option>
+    </select>
+    Root:
+    <select id="root">
+        <option value="0">C</option>
+        <option value="1">C#</option>
+        <option value="2">D</option>
+        <option value="3">D#</option>
+        <option value="4">E</option>
+        <option value="5">F</option>
+        <option value="6">F#</option>
+        <option value="7">G</option>
+        <option value="8">G#</option>
+        <option value="9">A</option>
+        <option value="10">A#</option>
+        <option value="11">B</option>
+    </select>
+    <br><br>
+    Instrument:
+    <select id="instrument">
+        <option value="0">Piano</option>
+        <option value="1">Guitar</option>
+        <option value="2">Rock</option>
+        <option value="3">Celesta</option>
+        <option value="4">Organ</option>
+    </select>
+    Tempo: <input type="number" id="tempo" value = 60 style="width: 45px" min ="1" max="1000">
+</div> <!--/container-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
