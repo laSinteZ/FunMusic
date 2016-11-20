@@ -73,7 +73,10 @@ $(document).ready(function () {
 
         if ((functionToParse === "pi") || (functionToParse === "3.14") || (functionToParse === "3,14")) {
             notes = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3]
-        } else {
+        } else if ((functionToParse === "e") || (functionToParse === "2.71") || (functionToParse === "2,71")) {
+            notes = [2, 7, 1, 8, 2, 8, 1, 8, 2, 8, 4, 5, 9, 0, 4, 5]
+        }
+        else {
 
             for (var i = 0; i < numOfNotes; i++) {
                 notes[i] = math.eval(functionToParse, {x: i});
@@ -81,7 +84,7 @@ $(document).ready(function () {
             }
         }
 
-        for(i = 0; i < numOfNotes; i++){
+        for (i = 0; i < numOfNotes; i++) {
             notes[i] = notes[i] % notesInScale;
             notes[i] = math.floor(notes[i]);
         }
